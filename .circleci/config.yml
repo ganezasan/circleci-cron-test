@@ -5,7 +5,7 @@ jobs:
       - image: circleci/node:latest
     steps:
       - checkout
-workflows
+workflows:
   version:2
   cron-workflow:
     triggers:
