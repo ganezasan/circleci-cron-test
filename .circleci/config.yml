@@ -10,11 +10,10 @@ workflows:
   workflow:
     jobs:
       - build
-  
-  cron-workflow:
+  nightly:
     triggers:
       - schedule:
-          cron: "1 * * * *"
+          cron: "0 * * * *"
           filters:
             branches:
               only:
