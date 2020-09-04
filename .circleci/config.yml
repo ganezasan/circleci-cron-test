@@ -1,0 +1,19 @@
+version: 2
+jobs:
+  build: 
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+workflows
+  version:2
+  cron-workflow:
+    triggers:
+      - schedule:
+          cron: "1 * * * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - build
